@@ -3,7 +3,7 @@
         margin: 2px !important;
         padding: 15% !important;
         height: 100%;
-        background: #60a3bc !important;
+        background: #ffffff !important;
         min-height: 100vh;
         
     }
@@ -12,11 +12,13 @@
         width: 500px;
         margin-top: auto;
         margin-bottom: auto;
-        background: #f39c12;
+        background: #ffffff;
         position:relative;
         display: flex;
+        border: 2px solid #01A896;
         justify-content: center;
         flex-direction: column;
+        font-family: 'Familjen Grotesk', sans-serif;
         padding: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -32,9 +34,10 @@
         width: 170px;
         top: -75px;
         border-radius: 50%;
-        background: #60a3bc;
+        background: #01A896;
         padding: 10px;
         text-align: center;
+        
     }
     .brand_logo {
         height: 150px;
@@ -49,8 +52,8 @@
     }
     .login_btn {
         width: 100%;
-        background: #c0392b !important;
-        color: white !important;
+        background: #01A896 !important;
+        color: rgb(255, 255, 255) !important;
     }
     .login_btn:focus {
         box-shadow: none !important;
@@ -60,10 +63,11 @@
         padding: 0 2rem;
     }
     .input-group-text {
-        background: #c0392b !important;
-        color: white !important;
+        background: #01A896 !important;
+        color: rgb(255, 255, 255) !important;
         border: 0 !important;
         border-radius: 0.25rem 0 0 0.25rem !important;
+        font-family: 'Familjen Grotesk', sans-serif;
     }
     .input_user,
     .input_pass:focus {
