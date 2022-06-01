@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Create';
+  window = 'catalogue'
+
+  setWindow(newWindow:any){
+    this.window = newWindow;
+    console.log(this.window);
+  }
 }

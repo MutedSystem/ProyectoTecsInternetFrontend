@@ -1,0 +1,36 @@
+.navstyle {
+    border-bottom: 1px solid #000000;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navstyle div {
+    display: flex;
+    flex-direction: row;
+}
+
+.navstyle div p {
+    margin: 20px;
+}
+
+button {
+    justify-self: flex-end;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.login-button {
+    padding: 10px;
+    background-color: #d5fafc;
+    color: #01A896;
+}
+
+.register-button{ 
+    padding: 10px;
+    background-color: #01A896;
+    color: #d5fafc;
+}

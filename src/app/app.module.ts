@@ -7,13 +7,14 @@ import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { CatalogoComponent } from './components/catalogo/catalogo.component';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SinginComponent } from './components/singin/singin.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CatalogoComponent
+    NavbarComponent,
+    SinginComponent,
   ],
   imports: [
     BrowserModule,
