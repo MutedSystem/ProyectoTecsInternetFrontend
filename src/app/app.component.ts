@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   window = 'catalogue'
+  title ='';
 
   setWindow(newWindow:any){
     this.window = newWindow;

@@ -1,1 +1,4 @@
 <app-navbar (window)="setWindow($event)"></app-navbar>
+<div [ngSwitch]="window" class="content-container">
+    <app-singin *ngSwitchDefault></app-singin>
+</div>
