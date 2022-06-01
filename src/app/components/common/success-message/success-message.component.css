@@ -1,0 +1,18 @@
+div{
+    display: flex;
+    flex-direction: column;
+}
+
+div h2 {
+    color: #01a896;
+}
+
+div button {
+    padding: 10px;
+    align-self: flex-end;
+    margin: 10px;   
+    color: white;
+    background-color: #01a896;
+    border: none;  
+    border-radius: 5px;
+}

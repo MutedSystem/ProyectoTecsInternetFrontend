@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SinginComponent } from './components/singin/singin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingComponent } from './components/common/loading/loading.component';
+import { SuccessMessageComponent } from './components/common/success-message/success-message.component';
+import { ErrorMessageComponent } from './components/common/error-message/error-message.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { LoadingComponent } from './components/common/loading/loading.component'
     NavbarComponent,
     SinginComponent,
     LoadingComponent,
+    SuccessMessageComponent,
+    ErrorMessageComponent,
   ],
   imports: [
     BrowserModule,

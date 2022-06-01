@@ -28,4 +28,18 @@ export class AuthService {
 
   }
 
+  registrar(data: any){
+
+    const url = environment.URL_DOMINIO +'/auth/singup';
+
+    const options = {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }
+
+    return this.http.post(url,JSON.stringify(data),options);
+
+  }
+
 }
