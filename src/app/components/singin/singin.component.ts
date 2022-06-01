@@ -10,7 +10,6 @@ import { LoadingComponent } from '../common/loading/loading.component';
 })
 export class SinginComponent implements OnInit {
 
-
   private nameFormControl = new FormControl('', [Validators.required]);
   private emailFormControl = new FormControl('', [Validators.email, Validators.required]);
   private phoneNumberFormControl = new FormControl('', [Validators.required, Validators.pattern(/^[0-9]*$/)])
