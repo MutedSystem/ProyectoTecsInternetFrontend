@@ -3,10 +3,19 @@
     <p>Crearte</p>
     <p (click)="setWindow('catalogue')" type="button">Catalogo</p>
     <p (click)="setWindow('custom')">Personalizado</p>
-    <p (click)="setWindow('shopping')">carrito</p>
   </div>
-  <div>
+  <div *ngIf="name == null">
     <button class="login-button" (click)="setWindow('login')">Iniciar sesíon</button>
     <button class="register-button" (click)="setWindow('singin')">Registrarse</button>
+  </div>
+  <div *ngIf="name != null">
+    <mat-icon class="icon" matBadge="{{productsOnShopingCart}}" matBadgePosition="before" (click)="setWindow('shopping')">shopping_cart</mat-icon>
+    <button [matMenuTriggerFor]="menu" overlapTrigger class="session-button">
+      <mat-icon>account_circle</mat-icon>{{name}}
+    </button>
+    <mat-menu #menu="matMenu" xPosition="before">
+      <button mat-menu-item>Ver compras hechas</button>
+      <button mat-menu-item (click)="singout()">Cerrar sesion</button>
+    </mat-menu>
   </div>
 </div>

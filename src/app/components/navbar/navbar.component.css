@@ -3,7 +3,7 @@
     width: 90vw;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center;    
     justify-content: space-between;
 }
 
@@ -12,8 +12,26 @@
     flex-direction: row;
 }
 
+.session-button {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #01a896;
+}
+
+.navstyle div button mat-icon {
+    margin: 5px;
+}
+
 .navstyle div p {
     margin: 20px;
+}
+
+.navstyle .icon {
+    align-self: center;
 }
 
 button {
@@ -26,11 +44,17 @@ button {
 .login-button {
     padding: 10px;
     background-color: #d5fafc;
-    color: #01A896;
+    color: #01a896;
 }
 
-.register-button{ 
+.register-button {
     padding: 10px;
-    background-color: #01A896;
+    background-color: #01a896;
     color: #d5fafc;
 }
+
+::ng-deep .mat-menu-panel {
+    overflow-x: hidden !important;
+    width: 249px !important;
+    max-width: 250px !important;
+  }
