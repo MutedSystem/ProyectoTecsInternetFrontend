@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadingComponent } from './components/common/loading/loading.component';
 import { SuccessMessageComponent } from './components/common/success-message/success-message.component';
 import { ErrorMessageComponent } from './components/common/error-message/error-message.component';
+import { ProductsBougthComponent } from './components/products-bougth/products-bougth.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ErrorMessageComponent } from './components/common/error-message/error-m
     LoadingComponent,
     SuccessMessageComponent,
     ErrorMessageComponent,
+    ProductsBougthComponent,
   ],
   imports: [
     BrowserModule,

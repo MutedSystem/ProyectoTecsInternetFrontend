@@ -1,4 +1,5 @@
 <app-navbar (window)="setWindow($event)"></app-navbar>
 <div [ngSwitch]="window" class="content-container">
-    <app-singin *ngSwitchDefault></app-singin>
+    <app-singin *ngSwitchCase="'singin'"></app-singin>
+    <app-products-bougth *ngSwitchCase="'bougths'"></app-products-bougth>
 </div>

@@ -14,7 +14,7 @@
       <mat-icon>account_circle</mat-icon>{{name}}
     </button>
     <mat-menu #menu="matMenu" xPosition="before">
-      <button mat-menu-item>Ver compras hechas</button>
+      <button mat-menu-item (click)="setWindow('bougths')">Ver compras hechas</button>
       <button mat-menu-item (click)="singout()">Cerrar sesion</button>
     </mat-menu>
   </div>
