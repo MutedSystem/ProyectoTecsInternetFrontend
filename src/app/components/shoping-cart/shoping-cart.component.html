@@ -1,0 +1,51 @@
+<div class="shoing-cart-container">
+  <h2>Carrito de compras</h2>
+  <table>
+    <div>
+      <tr>
+        <td>
+
+        </td>
+        <td>
+          imagen
+        </td>
+        <td>
+          nombre
+        </td>
+        <td>
+          Precio
+        </td>
+        <td>
+          Cantidad
+        </td>
+        <td>
+          Precio unitario
+        </td>
+      </tr>
+    </div>
+    <div>
+      <tr *ngFor="let product of products">
+        <td>
+          <mat-icon>delete</mat-icon>
+        </td>
+        <td>
+          <img src="{{product.photoUrl}}">
+        </td>
+        <td>
+          {{product.name}}
+        </td>
+        <td>
+          {{product.price * product.quantity}}
+        </td>
+        <td>
+          {{product.quantity}}
+        </td>
+        <td>
+          {{product.price}}
+        </td>
+      </tr>
+    </div>
+  </table>
+  <p>Total: ${{total}}</p>
+  <button>Comprar</button>
+</div>

@@ -20,6 +20,7 @@ import { LoadingComponent } from './components/common/loading/loading.component'
 import { SuccessMessageComponent } from './components/common/success-message/success-message.component';
 import { ErrorMessageComponent } from './components/common/error-message/error-message.component';
 import { ProductsBougthComponent } from './components/products-bougth/products-bougth.component';
+import { ShopingCartComponent } from './components/shoping-cart/shoping-cart.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProductsBougthComponent } from './components/products-bougth/products-b
     SuccessMessageComponent,
     ErrorMessageComponent,
     ProductsBougthComponent,
+    ShopingCartComponent,
   ],
   imports: [
     BrowserModule,
