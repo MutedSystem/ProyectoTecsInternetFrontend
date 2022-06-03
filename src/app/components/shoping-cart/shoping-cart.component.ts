@@ -37,6 +37,7 @@ export class ShopingCartComponent implements OnInit {
     newShoping.shopingCart.products = this.products;
 
     localStorage.setItem('CrearteData',JSON.stringify(newShoping));
+    window.dispatchEvent(new Event('storage'));
 
   }
 

@@ -16,7 +16,17 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    localStorage.setItem('CrearteData',JSON.stringify({
+    if (window.addEventListener) {
+      window.addEventListener("storage", () => {
+        let data = localStorage.getItem('CrearteData');
+        if (data) {
+          this.name = JSON.parse(data).name;
+          this.productsOnShopingCart = JSON.parse(data).shopingCart.products.length;
+        }
+      }, false);
+    }
+
+    localStorage.setItem('CrearteData', JSON.stringify({
       name: "daniel",
       token: "",
       shopingCart: {
