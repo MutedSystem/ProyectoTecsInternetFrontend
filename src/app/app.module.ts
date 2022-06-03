@@ -11,6 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppComponent } from './app.component';
 
 import { AuthService } from './services/auth.service';
+import { ProductService } from './services/product.service';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -22,6 +23,7 @@ import { ErrorMessageComponent } from './components/common/error-message/error-m
 import { ProductsBougthComponent } from './components/products-bougth/products-bougth.component';
 import { ShopingCartComponent } from './components/shoping-cart/shoping-cart.component';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { CatalogueComponent } from './components/catalogue/catalogue.component';
     ProductsBougthComponent,
     ShopingCartComponent,
     CatalogueComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { CatalogueComponent } from './components/catalogue/catalogue.component';
     MatMenuModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ProductService
   ],
   bootstrap: [
     AppComponent
