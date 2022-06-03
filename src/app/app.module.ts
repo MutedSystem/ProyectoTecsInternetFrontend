@@ -21,6 +21,7 @@ import { SuccessMessageComponent } from './components/common/success-message/suc
 import { ErrorMessageComponent } from './components/common/error-message/error-message.component';
 import { ProductsBougthComponent } from './components/products-bougth/products-bougth.component';
 import { ShopingCartComponent } from './components/shoping-cart/shoping-cart.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ShopingCartComponent } from './components/shoping-cart/shoping-cart.com
     ErrorMessageComponent,
     ProductsBougthComponent,
     ShopingCartComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
