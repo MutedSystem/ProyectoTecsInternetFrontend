@@ -22,4 +22,24 @@ export class ShopingCartComponent implements OnInit {
     }
   }
 
+  delete(id: string) {
+    const idToDelete = this.products.findIndex((product: any) => {
+      return product.id == id
+    });
+
+    console.log(idToDelete);
+
+    this.products.splice(idToDelete, 1);
+
+    const data = localStorage.getItem('CrearteData');
+
+    const newShoping = JSON.parse(data as string);
+    newShoping.shopingCart.products = this.products;
+
+    localStorage.setItem('CrearteData',JSON.stringify(newShoping));
+
+  }
+
 }
+
+

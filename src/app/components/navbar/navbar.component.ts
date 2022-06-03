@@ -22,12 +22,14 @@ export class NavbarComponent implements OnInit {
       shopingCart: {
         products: [
           {
+            id: "1",
             name: "primer",
             price: 1000,
             quantity: 1,
             photoUrl: "https://www.dexerto.es/wp-content/uploads/sites/3/2022/02/20/yelan.jpg"
           },
           {
+            id: "2",
             name: "segundo",
             price: 1000,
             quantity: 3,
