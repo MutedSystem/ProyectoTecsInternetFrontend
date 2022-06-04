@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "Create"
+  "defaultProject": "Create",
+  "cli": {
+    "analytics": false
+  }
 }

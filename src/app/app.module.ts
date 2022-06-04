@@ -11,6 +11,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppComponent } from './app.component';
 
 import { AuthService } from './services/auth.service';
+import { ProductService } from './services/product.service';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -49,7 +50,8 @@ import { FooterComponent } from './footer/footer.component';
     MatMenuModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ProductService
   ],
   bootstrap: [
     AppComponent

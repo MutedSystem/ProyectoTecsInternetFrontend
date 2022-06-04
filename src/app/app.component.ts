@@ -10,7 +10,6 @@ export class AppComponent {
   title ='';
 
   setWindow(newWindow:any){
-    this.window = newWindow;
-    console.log(this.window);
+    this.window = newWindow
   }
 }
