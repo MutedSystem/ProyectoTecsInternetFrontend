@@ -1,5 +1,5 @@
 import { toBase64String } from '@angular/compiler/src/output/source_map';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,6 +10,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class CatalogueComponent implements OnInit {
 
   products : any = [];
+  
+  @Output() window = new EventEmitter<string>();
 
   constructor(private productsService: ProductService) { }
 
@@ -21,6 +23,10 @@ export class CatalogueComponent implements OnInit {
       console.error(error);
     });
 
+  }
+
+  setWindow(item: any) {
+    this.window.emit('product/'+item.idProducto);
   }
 
 }

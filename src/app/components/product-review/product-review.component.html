@@ -1,0 +1,24 @@
+<div class="product-container">
+    <div class="carrusel">
+        <button (click)="previusImage()"><b><</b></button>
+        <img src="{{momentImageUrl}}">
+        <button (click)="nextImage()"><b>></b></button>
+    </div>
+    <div class="content">
+        <h3>{{product.nombre}}</h3>
+        <h4>Descripcion</h4>
+        <p>{{product.descripcion}}</p>
+        <p class="price-container">Precio: ${{product.precio}}</p>
+        <p>Cantidad</p>
+        <div class="quantityContainer">
+            <button (click)="addProduct()" class="left-border">+</button>
+            <p>{{quantity}}</p>
+            <button (click)="removeProduct()" class="rigth-border ">-</button>
+        </div>
+        <button (click)="addToShopingCart()">
+            <mat-icon>add_shopping_cart</mat-icon>
+            <p>Añadir al carrito</p>
+        </button>
+        <button (click)="buy()">Comprar</button>
+    </div>
+</div>

@@ -9,14 +9,9 @@ export class AuthService {
 
   constructor(private http : HttpClient) {}
 
-  iniciarSesion(correo:string, contrasena:string){
+  iniciarSesion(data:any){
 
     const url = environment.URL_DOMINIO +'/auth/singin';
-
-    const data = {
-      email : correo,
-      password : contrasena
-    }
 
     const options = {
       headers: {

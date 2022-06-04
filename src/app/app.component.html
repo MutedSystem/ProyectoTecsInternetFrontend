@@ -2,7 +2,10 @@
 <div [ngSwitch]="window" class="content-container">
     <app-singin *ngSwitchCase="'singin'"></app-singin>
     <app-products-bougth *ngSwitchCase="'bougths'"></app-products-bougth>
-    <app-shoping-cart *ngSwitchDefault></app-shoping-cart><!--*ngSwitchCase="'shopping'" -->
+    <app-shoping-cart *ngSwitchCase="'shopping'"></app-shoping-cart>
+    <app-product-review *ngSwitchCase="'product'" [id]="id"></app-product-review>
+    <app-catalogue *ngSwitchCase="'catalogue'" (window)="setWindow($event)"></app-catalogue>
+    <app-login *ngSwitchCase="'login'" (window)="setWindow($event)"></app-login>
+    <app-custom *ngSwitchCase="'custom'"></app-custom>
 </div>
 <app-footer></app-footer>
-    

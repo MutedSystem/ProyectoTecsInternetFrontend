@@ -26,30 +26,6 @@ export class NavbarComponent implements OnInit {
       }, false);
     }
 
-    localStorage.setItem('CrearteData', JSON.stringify({
-      name: "daniel",
-      token: "",
-      shopingCart: {
-        products: [
-          {
-            id: "1",
-            name: "primer",
-            price: 1000,
-            quantity: 1,
-            photoUrl: "https://www.dexerto.es/wp-content/uploads/sites/3/2022/02/20/yelan.jpg"
-          },
-          {
-            id: "2",
-            name: "segundo",
-            price: 1000,
-            quantity: 3,
-            photoUrl: "https://xboxplay.games/uploadStream/18601.jpg"
-          }
-        ],
-        total: 10
-      }
-    }));
-
     let data = localStorage.getItem('CrearteData');
 
     if (data) {

@@ -1,0 +1,36 @@
+img {
+    width: 10vw;
+    height: 10vw;
+}
+
+.buys-container{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    color: #05668d;
+}
+
+.buy {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px #05668d solid;
+    margin: 10px;
+    padding:20px;
+    border-radius: 20px;
+
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    width: 75vw;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    border: 1px #05668d solid;
+    border-radius: 5px;
+}

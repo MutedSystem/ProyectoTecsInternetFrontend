@@ -64,7 +64,7 @@ export class SinginComponent implements OnInit {
       switch (error.status) {
         case 419: {
           this.dialog.closeAll();
-          this.dialog.open(SuccessMessageComponent, {
+          this.dialog.open(ErrorMessageComponent, {
             width: '250px',
             data: {
               title: 'Ya tienes una cuenta',
@@ -76,7 +76,7 @@ export class SinginComponent implements OnInit {
 
         default: {
           this.dialog.closeAll();
-          this.dialog.open(SuccessMessageComponent, {
+          this.dialog.open(ErrorMessageComponent, {
             width: '250px',
             data: {
               title: 'Algo salió mal',

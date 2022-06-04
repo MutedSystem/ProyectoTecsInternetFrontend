@@ -1,1 +1,13 @@
-<p>products-bougth works!</p>
+<div>
+    <h1>Productos comprados</h1>
+    <div *ngFor="let buy of buys" class="buy">
+        <p><b>Fecha de pago:</b> {{buy.date | date: 'yyyy-MM-dd'}}</p>
+        <p><b>Total pagado:</b> ${{buy.total}}</p>
+        <div *ngFor="let product of buy.products" class="product">
+            <img [src]="sanitizeImageUrl(product.photoUrl)">
+            <h3>Nombre: {{product.name}}</h3>
+            <p><b>Descripcion:</b> {{product.description}}</p>
+            <p><b>Cantidad:</b> {{product.quantity}}</p>
+        </div>
+    </div>
+</div>

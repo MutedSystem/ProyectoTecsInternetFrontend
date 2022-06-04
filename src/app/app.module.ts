@@ -1,3 +1,4 @@
+import { BuyService } from './services/buy.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +23,12 @@ import { SuccessMessageComponent } from './components/common/success-message/suc
 import { ErrorMessageComponent } from './components/common/error-message/error-message.component';
 import { ProductsBougthComponent } from './components/products-bougth/products-bougth.component';
 import { ShopingCartComponent } from './components/shoping-cart/shoping-cart.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductReviewComponent } from './components/product-review/product-review.component';
+import { CustomComponent } from './components/custom/custom.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -36,6 +42,10 @@ import { FooterComponent } from './footer/footer.component';
     ProductsBougthComponent,
     ShopingCartComponent,
     FooterComponent,
+    CatalogueComponent,
+    ProductComponent,
+    ProductReviewComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +61,9 @@ import { FooterComponent } from './footer/footer.component';
   ],
   providers: [
     AuthService,
-    ProductService
+    ProductService,
+    BuyService,
+    DatePipe
   ],
   bootstrap: [
     AppComponent

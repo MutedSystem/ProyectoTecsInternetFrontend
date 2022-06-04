@@ -1,5 +1,5 @@
 <div class="product-container">
-    <img src="{{photoUrl}}">
-    <p>{{item.nombre}}</p>
-    <p>{{item.precio}}</p>
+    <img [src]="sanitizeImageUrl(photoUrl)">
+    <p class="name">{{item.nombre}}</p>
+    <p class="price">{{item.precio}}</p>
 </div>
