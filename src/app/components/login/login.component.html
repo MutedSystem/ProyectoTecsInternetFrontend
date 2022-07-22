@@ -1,0 +1,19 @@
+<form class="register" [formGroup]="form">
+    <h1>Iniciar sesión</h1>
+    <label>Ingresa tu dirección de correo electronico*</label>
+    <input placeholder="estoesunejemplo@tucorreo.com" formControlName="email" type="email" />
+    <small *ngIf="form.get('email')?.hasError('required') && form.get('email')?.dirty">Este campo es obligatorio</small>
+    <small *ngIf="form.get('email')?.hasError('email') && form.get('email')?.dirty">Ingresa una dirección de email
+      valida</small>
+    <label>Ingresa tu contraseña*</label>
+    <input placeholder="Ingresa tu contraseña" formControlName="password" type="password" />
+    <small *ngIf="form.get('password')?.hasError('required') && form.get('password')?.dirty">Este campo es
+      obligatorio</small>
+    <small *ngIf="form.get('password')?.hasError('minlength') && form.get('password')?.dirty">La contraseña debe tener
+      como minimo 6 caracteres</small>
+    <small *ngIf="form.get('password')?.hasError('maxlength') && form.get('password')?.dirty">La contraseña solamente
+      puede tener un máximo de 100 caracteres</small>
+
+    <small *ngIf="form.get('confirmPassword')?.value != form.get('password')?.value && (form.get('confirmPassword')?.dirty && form.get('password')?.dirty)">Las contraseñas no son iguales</small>
+    <button [disabled]="form.invalid" type="button" (click)="login()">Iniciar sesión</button>
+  </form>

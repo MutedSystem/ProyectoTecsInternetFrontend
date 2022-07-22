@@ -1,0 +1,18 @@
+<div class="custom-container">
+    <h1>Personaliza tu muñeco</h1>
+    <div class="info">
+        <div class="files">
+            <label for="files">Sube tu imagen aquí</label>
+            <input id="files" type="file" accept="image/*" (change)="loadFiles($event)" multiple>
+        </div>
+        <div class="form">
+            <input type="text" [formControl]="descriptionFormControl"
+                placeholder="Describe las caracteristicas de tu producto">
+            <button (click)="createProduct()" [disabled]="descriptionFormControl.invalid || files == null">
+                <mat-icon>add_shopping_cart</mat-icon>
+                <p>Añadir al carrito</p>
+            </button>
+            <button (click)="buy()" [disabled]="descriptionFormControl.invalid || files == null">Comprar</button>
+        </div>
+    </div>
+</div>

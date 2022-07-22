@@ -1,0 +1,47 @@
+.register {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.register h1 {
+    align-self: center;
+    color: #05668d;
+}
+
+.register label{
+    color: #05668d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.register input {
+    padding: 10px;
+    margin: 6px 0px 6px 0px;
+    border-radius: 5px;
+    border: 1px solid #01a896;
+}
+
+.register input::placeholder {
+    color: #01a896;
+}
+
+.register input:focus {
+    outline:#01a896;
+}
+
+.register button {
+    padding: 10px;
+    align-self: flex-end;
+    margin: 10px;   
+    color: white;
+    background-color: #01a896;
+    border: none;  
+    border-radius: 5px;
+}
+
+.register small {
+    color: red;
+}
+

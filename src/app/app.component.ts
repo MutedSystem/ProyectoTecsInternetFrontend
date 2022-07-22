@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Create';
+  window = 'catalogue'
+  title ='';
+  id='';
+
+  setWindow(newWindow:any){
+    this.window = newWindow;
+    let cantidadDatos = newWindow.split('/');
+    if(cantidadDatos.length > 1){
+      this.id = newWindow.split('/')[1];
+      this.window = 'product';
+    }else{
+      this.window = newWindow;
+    }
+  }
 }

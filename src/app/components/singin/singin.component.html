@@ -1,0 +1,39 @@
+  <form class="register" [formGroup]="form">
+    <h1>Registrate</h1>
+    <label>Ingresa tu nombre y apellido*</label>
+    <input placeholder="Nombre y apellido" formControlName="name" type="text" />
+    <small *ngIf="form.get('name')?.hasError('required') && form.get('name')?.dirty">Este campo es obligatorio</small>
+    <label>Ingresa tu dirección de correo electronico*</label>
+    <input placeholder="estoesunejemplo@tucorreo.com" formControlName="email" type="email" />
+    <small *ngIf="form.get('email')?.hasError('required') && form.get('email')?.dirty">Este campo es obligatorio</small>
+    <small *ngIf="form.get('email')?.hasError('email') && form.get('email')?.dirty">Ingresa una dirección de email
+      valida</small>
+    <label>Ingresa tu número de telefono*</label>
+    <input placeholder="1231231231" formControlName="phone" />
+    <small *ngIf="form.get('phone')?.hasError('required') && form.get('phone')?.dirty">Este campo es obligatorio</small>
+    <small *ngIf="form.get('phone')?.hasError('pattern') && form.get('phone')?.dirty">Solamente puedes ingresar
+      numeros</small>
+    <label>Ingresa tu dirección*</label>
+    <input placeholder="Calle 4" formControlName="direction" type="text" />
+    <small *ngIf="form.get('direction')?.hasError('required') && form.get('direction')?.dirty">Este campo es
+      obligatorio</small>
+    <label>Ingresa tu contraseña*</label>
+    <input placeholder="Ingresa tu contraseña" formControlName="password" type="password" />
+    <small *ngIf="form.get('password')?.hasError('required') && form.get('password')?.dirty">Este campo es
+      obligatorio</small>
+    <small *ngIf="form.get('password')?.hasError('minlength') && form.get('password')?.dirty">La contraseña debe tener
+      como minimo 6 caracteres</small>
+    <small *ngIf="form.get('password')?.hasError('maxlength') && form.get('password')?.dirty">La contraseña solamente
+      puede tener un máximo de 100 caracteres</small>
+    <label>Confirma tu contraseña*</label>
+    <input placeholder="Confirma tu contraseña" formControlName="confirmPassword" type="password" />
+    <small *ngIf="form.get('confirmPassword')?.hasError('required') && form.get('confirmPassword')?.dirty">Este campo es
+      obligatorio</small>
+    <small *ngIf="form.get('confirmPassword')?.hasError('minlength') && form.get('confirmPassword')?.dirty">La
+      contraseña debe tener como minimo 6 caracteres</small>
+    <small *ngIf="form.get('confirmPassword')?.hasError('maxlength') && form.get('confirmPassword')?.dirty">La
+      contraseña solamente puede tener un máximo de 100 caracteres</small>
+
+    <small *ngIf="form.get('confirmPassword')?.value != form.get('password')?.value && (form.get('confirmPassword')?.dirty && form.get('password')?.dirty)">Las contraseñas no son iguales</small>
+    <button [disabled]="form.invalid || form.get('confirmPassword')?.value != form.get('password')?.value" type="button" (click)="singin()">Registrar</button>
+  </form>
